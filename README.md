@@ -1,7 +1,27 @@
 # Local AI Assistant for IT Operations  
 **Deploying a Self-Hosted LLM with Secure System Integration**
 
-This is a personal project showcasing my skills as an IT/Cybersecurity professional. The goal is to build a **self-hosted LLM** trained and prompt-tuned to assist with system administration tasks, including but not limited to PowerShell scripting and log parsing.  
+[![Python](https://img.shields.io/badge/Python-3.13.7-blue?logo=python&logoColor=white)](https://www.python.org/) 
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Repo Status](https://img.shields.io/badge/Status-Phase%201-yellow)](README.md)
+
+---
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)  
+2. [Features](#features)  
+3. [Technology Stack](#technology-stack)  
+4. [System Requirements](#system-requirements)  
+5. [Setup Instructions](#setup-instructions)  
+6. [Next Steps (Phase 2)](#next-steps-phase-2)  
+7. [Notes](#notes)
+
+---
+
+## Project Overview
+
+This project showcases my skills as an IT/Cybersecurity professional. The goal is to build a **self-hosted LLM** trained and prompt-tuned to assist with system administration tasks, including PowerShell scripting, log parsing, and local system management.  
 
 The assistant will be able to:  
 - Parse and answer IT-related questions (e.g., “What PowerShell command resets a user password?”)  
@@ -24,7 +44,7 @@ The assistant will be able to:
 
 - **Ollama** – LLM backend  
 - **Docker Desktop** – Containerization  
-- **Python** – Scripting and automation  
+- **Python** – Scripting and automation 
 - **FastAPI** – API layer framework  
 - **Gradio** – Web-based user interface  
 
@@ -39,8 +59,9 @@ The assistant will be able to:
 
 ---
 
-## Notes
+## Setup Instructions
 
-- Sensitive information (e.g., API keys) is stored in a `.env` file, **NOT in code**  
-- The repository includes `.gitignore` to exclude virtual environments, model caches, and secrets  
-- This project is intended for **local, private use only**
+1. **Clone the repository**
+```powershell
+git clone https://github.com/<your-username>/LocalITAssistant.git
+cd LocalITAssistant
