@@ -13,7 +13,7 @@
 2. [Features](#features)  
 3. [Technology Stack](#technology-stack)  
 4. [System Requirements](#system-requirements)  
-5. [Setup Instructions](#setup-instructions)  
+5. [Step 1](#step-1)  
 6. [Next Steps](#next-steps)  
 7. [Notes](#notes)
 
@@ -59,7 +59,7 @@ The assistant will be able to:
 
 ---
 
-## Setup Instructions
+## Step 1
 
 1. **Clone the repository**
 ```powershell
