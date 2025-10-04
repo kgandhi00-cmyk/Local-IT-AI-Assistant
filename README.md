@@ -14,7 +14,7 @@
 3. [Technology Stack](#technology-stack)  
 4. [System Requirements](#system-requirements)  
 5. [Step 1](#step-1)  
-6. [Next Steps](#next-steps)  
+6. [Step 2](#Step-2)  
 7. [Notes](#notes)
 
 ---
@@ -93,7 +93,7 @@ python test_ollama.py
 
 ---
 
-## Next Steps
+## Step 2
 
 - Integrate LLM with system utilities securely
 
