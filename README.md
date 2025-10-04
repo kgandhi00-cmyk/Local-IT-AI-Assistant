@@ -63,7 +63,7 @@ The assistant will be able to:
 
 1. **Clone the repository**
 ```powershell
-git clone https://github.com/<your-username>/LocalITAssistant.git
+git clone https://github.com/kgandhi00-cmyk/LocalITAssistant.git
 cd LocalITAssistant
 ```
 2. **Setup Python virtual environment**
