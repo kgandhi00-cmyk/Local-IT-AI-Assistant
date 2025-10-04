@@ -1,0 +1,84 @@
+# ---------------------------
+# Python
+# ---------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+*.dist-info/
+*.so
+*.dylib
+*.dll
+
+# ---------------------------
+# Virtual Environment
+# ---------------------------
+venv/
+env/
+ENV/
+
+# ---------------------------
+# Environment Variables / Secrets
+# ---------------------------
+.env
+.env.*
+
+# ---------------------------
+# Ollama
+# ---------------------------
+.ollama/
+*.llama-cache/
+
+# ---------------------------
+# IDEs and Editors
+# ---------------------------
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# ---------------------------
+# OS Generated Files
+# ---------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ---------------------------
+# Logs
+# ---------------------------
+*.log
+
+# ---------------------------
+# Temporary / Build Files
+# ---------------------------
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# ---------------------------
+# Docker
+# ---------------------------
+docker-compose.override.yml
+*.env.docker
+
+# ---------------------------
+# Python Packaging / Build
+# ---------------------------
+build/
+dist/
+*.egg-info/
