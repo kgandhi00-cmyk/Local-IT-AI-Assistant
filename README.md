@@ -113,6 +113,26 @@ Objectives:
 
 - Logs queries/responses for debugging.
 
+1. **Open project directory in powershell & start assistant **
+```powershell
+cd .\Documents\Projects\LocalITAssistant\
+.\start_assistant.ps1
+```
+2. **Ask questions directly in powershell to verify functionality**
+```powershell
+python -m src.cli ask "How do I list running processes in PowerShell?"
+```
+3. **Launch assitant's back end (FastAPI)**
+```powershell
+ python -m uvicorn src.web:app --reload   
+```
+4. **In new powershell tab, enter test POST request (test API access)**
+```powershell
+(Invoke-RestMethod -Uri "http://127.0.0.1:8000/ask" -Method POST -Headers @{ "x-api-key"="example_api_key_please_replace" } -Body (@{ question="How do I list all running services in PowerShell?" } | ConvertTo-Json) -ContentType "application/json").answer
+```
+
+---
+
 ## Notes
 
 - Sensitive information (e.g., API keys) is stored in a `.env` file, **NOT in code**  
