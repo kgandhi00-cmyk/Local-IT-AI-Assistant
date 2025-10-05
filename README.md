@@ -69,7 +69,6 @@ Objectives:
 
 - Create initialization script to automatically start the virtual environment (start_assistant.ps1)
 
-Document setup in README
 1. **Clone the repository**
 ```powershell
 git clone https://github.com/kgandhi00-cmyk/LocalITAssistant.git
