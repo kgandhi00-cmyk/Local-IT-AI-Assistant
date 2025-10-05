@@ -94,14 +94,16 @@ python test_ollama.py
 ---
 
 ## Step 2
+Objectives:
+- Accepts IT questions and returns LLM answers,
 
-- Integrate LLM with system utilities securely
+- Can generate scripts (PowerShell/Bash) but won’t run them automatically,
 
-- Build API and web interface for local access
+- Can run a small set of predefined, safe read-only actions on your machine (e.g., list processes, list services),
 
-- Implement prompt tuning and task-specific scripts
+- Provides a local HTTP API (FastAPI) to connect a UI or CLI,
 
-- Expand functionality to support advanced IT operations and automation
+- Logs queries/responses for debugging.
 
 ## Notes
 
