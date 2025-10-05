@@ -60,7 +60,16 @@ The assistant will be able to:
 ---
 
 ## Step 1
+Objectives:
+- Install Ollama and Python environment
 
+- Set up virtual environment
+
+- Test LLM with simple prompts (test_ollama.py)
+
+- Create initialization script to automatically start the virtual environment (start_assistant.ps1)
+
+Document setup in README
 1. **Clone the repository**
 ```powershell
 git clone https://github.com/kgandhi00-cmyk/LocalITAssistant.git
