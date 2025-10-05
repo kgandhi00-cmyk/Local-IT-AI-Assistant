@@ -1,84 +1,53 @@
-# ---------------------------
-# Python
-# ---------------------------
+# ========================
+# Python related
+# ========================
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.egg
-*.egg-info/
-*.dist-info/
-*.so
-*.dylib
-*.dll
+*.pyc
 
-# ---------------------------
-# Virtual Environment
-# ---------------------------
+# Virtual environment
 venv/
 env/
-ENV/
+.venv/
 
-# ---------------------------
-# Environment Variables / Secrets
-# ---------------------------
+# ========================
+# Logs and system files
+# ========================
+logs/
+*.log
+*.sqlite3
+
+# ========================
+# Environment / secrets
+# ========================
 .env
 .env.*
+secrets.json
 
-# ---------------------------
-# Ollama
-# ---------------------------
-.ollama/
-*.llama-cache/
-
-# ---------------------------
-# IDEs and Editors
-# ---------------------------
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# ---------------------------
-# OS Generated Files
-# ---------------------------
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-*.lnk
-
-# macOS
+# ========================
+# OS generated files
+# ========================
 .DS_Store
-.AppleDouble
-.LSOverride
+Thumbs.db
+desktop.ini
 
-# Linux
-*~
+# ========================
+# VS Code settings
+# ========================
+.vscode/
+*.code-workspace
 
-# ---------------------------
-# Logs
-# ---------------------------
-*.log
+# ========================
+# Python packaging
+# ========================
+*.egg-info/
+dist/
+build/
 
-# ---------------------------
-# Temporary / Build Files
-# ---------------------------
-*.tmp
+# ========================
+# Misc
+# ========================
 *.bak
 *.swp
-*.swo
-
-# ---------------------------
-# Docker
-# ---------------------------
-docker-compose.override.yml
-*.env.docker
-
-# ---------------------------
-# Python Packaging / Build
-# ---------------------------
-build/
-dist/
-*.egg-info/
