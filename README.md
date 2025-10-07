@@ -134,7 +134,7 @@ python -m src.cli ask "How do I list running processes in PowerShell?"
 
 ---
 
-## Step 3:
+## Step 3
 1. **Safe Action Whitelist**
 Created safe_actions.json containing pre-approved commands (e.g., list processes, list services, disk usage).
 Updated assistant.py to reference this file and run only whitelisted actions via a new run_safe method.
