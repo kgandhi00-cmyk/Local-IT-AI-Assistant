@@ -147,6 +147,7 @@ JSON outputs from safe actions are automatically formatted for readability.
 3. **Interactive CLI (cli_loop.py)**
 New file src/cli_loop.py provides a REPL-style interface.
 Allows multiple questions and safe actions in one session.
+
 Supports commands:
 - ask <question> – Ask the assistant a question.
 - gen-script <task> – Generate a PowerShell script for a task.
@@ -154,6 +155,21 @@ Supports commands:
 - run-action <action> – Execute a safe action.
 - help – Show available commands.
 - exit / quit – End the session.
+
+**Usage:**
+- List Actions
+```powershell
+python -m src.cli list-actions
+```
+- Run a safe action
+```powershell
+python -m src.cli run-action <action>
+```
+- Ask questions via CLI:
+```powershell
+python -m src.cli ask "<question>"
+```
+*Can also use src.cli_loop to enter mode that allows mulitple questions & safe actions in one session.*
 
 ---
 
