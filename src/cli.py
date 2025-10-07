@@ -3,7 +3,7 @@ import argparse
 import json
 import subprocess
 
-assistant = ITAssistant()
+'''assistant = ITAssistant()
 
 def cmd_ask(args):
     print("Asking assistant...\n")
@@ -60,4 +60,66 @@ def main():
     args.func(args)
 
 if __name__=="__main__":
+    main()'''
+assistant = ITAssistant()
+
+def cmd_ask(args):
+    print("Asking assistant...\n")
+    resp = assistant.ask(args.question)
+    print(resp)
+
+def cmd_generate_script(args):
+    print("Requesting generated script from assistant...\n")
+    script = assistant.generate_script(args.instruction, language=args.lang)
+    print(script)
+
+def cmd_list_actions(args):
+    actions = assistant.list_safe_actions()
+    print("Available safe actions:")
+    for a in actions:
+        print(" -", a)
+
+def cmd_execute_action(args):
+    action = args.action
+    print(f"Executing safe action: {action}\n")
+    output = assistant.run_safe(action)
+    
+    # Try to pretty-print JSON output if possible
+    try:
+        parsed = json.loads(output)
+        print(json.dumps(parsed, indent=2))
+    except Exception:
+        print(output)
+
+def main():
+    parser = argparse.ArgumentParser(prog="itassistant")
+    sub = parser.add_subparsers(dest="cmd")
+
+    # Ask question
+    ask_parser = sub.add_parser("ask")
+    ask_parser.add_argument("question")
+    ask_parser.set_defaults(func=cmd_ask)
+
+    # Generate script
+    gen_parser = sub.add_parser("gen-script")
+    gen_parser.add_argument("instruction")
+    gen_parser.add_argument("--lang", default="powershell")
+    gen_parser.set_defaults(func=cmd_generate_script)
+
+    # List safe actions
+    list_parser = sub.add_parser("list-actions")
+    list_parser.set_defaults(func=cmd_list_actions)
+
+    # Run safe action
+    run_parser = sub.add_parser("run-action")
+    run_parser.add_argument("action")
+    run_parser.set_defaults(func=cmd_execute_action)
+
+    args = parser.parse_args()
+    if not hasattr(args, "func"):
+        parser.print_help()
+        return
+    args.func(args)
+
+if __name__ == "__main__":
     main()

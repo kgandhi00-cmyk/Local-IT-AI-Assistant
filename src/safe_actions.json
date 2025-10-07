@@ -1,0 +1,12 @@
+{
+  "list_processes": "Get-Process",
+  "list_services": "Get-Service",
+  "check_ip": "ipconfig",
+  "ping_localhost": "ping 127.0.0.1 -n 4",
+  "system_info": "systeminfo",
+  "list_users": "Get-LocalUser",
+  "check_disk_space": "Get-PSDrive -PSProvider FileSystem",
+  "list_network_adapters": "Get-NetAdapter",
+  "check_firewall_status": "Get-NetFirewallProfile | Format-Table Name, Enabled",
+  "list_installed_programs": "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | Select-Object DisplayName, DisplayVersion"
+}
