@@ -14,8 +14,9 @@
 3. [Technology Stack](#technology-stack)  
 4. [System Requirements](#system-requirements)  
 5. [Step 1](#step-1)  
-6. [Step 2](#Step-2)  
-7. [Notes](#notes)
+6. [Step 2](#Step-2)
+7. [Step 3](#Step-3)  
+8. [Notes](#notes)
 
 ---
 
@@ -130,6 +131,29 @@ python -m src.cli ask "How do I list running processes in PowerShell?"
 ```powershell
 (Invoke-RestMethod -Uri "http://127.0.0.1:8000/ask" -Method POST -Headers @{ "x-api-key"="example_api_key_please_replace" } -Body (@{ question="How do I list all running services in PowerShell?" } | ConvertTo-Json) -ContentType "application/json").answer
 ```
+
+---
+
+## Step 3:
+1. **Safe Action Whitelist**
+Created safe_actions.json containing pre-approved commands (e.g., list processes, list services, disk usage).
+Updated assistant.py to reference this file and run only whitelisted actions via a new run_safe method.
+
+2. **CLI Improvements (cli.py)**
+Added run-action command to safely execute whitelisted commands.
+Updated list-actions to show all available safe actions.
+JSON outputs from safe actions are automatically formatted for readability.
+
+3. **Interactive CLI (cli_loop.py)**
+New file src/cli_loop.py provides a REPL-style interface.
+Allows multiple questions and safe actions in one session.
+Supports commands:
+- ask <question> – Ask the assistant a question.
+- gen-script <task> – Generate a PowerShell script for a task.
+- list-actions – Show available safe actions.
+- run-action <action> – Execute a safe action.
+- help – Show available commands.
+- exit / quit – End the session.
 
 ---
 
