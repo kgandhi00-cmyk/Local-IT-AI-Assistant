@@ -158,19 +158,19 @@ Supports the following commands:
 - exit / quit – End the session.
 
 **Usage:**
-- List Actions
+List Actions
 ```powershell
 python -m src.cli list-actions
 ```
-- Run a safe action
+Run a safe action
 ```powershell
 python -m src.cli run-action <action>
 ```
-- Ask questions via CLI:
+Ask questions via CLI:
 ```powershell
 python -m src.cli ask "<question>"
 ```
-- Generate PowerShell script
+Generate PowerShell script
 ```powershell
 python -m src.cli gen-script <description>
 ```
