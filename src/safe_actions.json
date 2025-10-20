@@ -1,12 +1,13 @@
 {
-  "list_processes": "Get-Process",
-  "list_services": "Get-Service",
-  "check_ip": "ipconfig",
-  "ping_localhost": "ping 127.0.0.1 -n 4",
-  "system_info": "systeminfo",
-  "list_users": "Get-LocalUser",
-  "check_disk_space": "Get-PSDrive -PSProvider FileSystem",
-  "list_network_adapters": "Get-NetAdapter",
-  "check_firewall_status": "Get-NetFirewallProfile | Format-Table Name, Enabled",
-  "list_installed_programs": "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | Select-Object DisplayName, DisplayVersion"
+  "list_processes": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-NoProfile", "-NonInteractive", "-Command", "Get-Process | Select-Object -First 200 | ConvertTo-Json"],
+  "list_services": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-NoProfile", "-NonInteractive", "-Command", "Get-Service | Select-Object -First 200 | ConvertTo-Json"],
+  "check_ip": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-Command", "ipconfig"],
+  "ping_localhost": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-Command", "ping 127.0.0.1 -n 4"],
+  "system_info": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-Command", "systeminfo"],
+  "list_users": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-Command", "Get-LocalUser | ConvertTo-Json"],
+  "disk_usage": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-NoProfile", "-NonInteractive", "-Command", "Get-PSDrive -PSProvider FileSystem | Select-Object Name,Used,Free,Root | ConvertTo-Json"],
+  "list_network_adapters": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-Command", "Get-NetAdapter | ConvertTo-Json"],
+  "check_firewall_status": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-Command", "Get-NetFirewallProfile | Format-Table Name, Enabled | Out-String"],
+  "list_installed_programs": ["C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe", "-Command", "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | Select-Object DisplayName, DisplayVersion | ConvertTo-Json"]
 }
+
