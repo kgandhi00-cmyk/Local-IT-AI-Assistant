@@ -15,8 +15,9 @@
 4. [System Requirements](#system-requirements)  
 5. [Step 1](#step-1)  
 6. [Step 2](#Step-2)
-7. [Step 3](#Step-3)  
-8. [Notes](#notes)
+7. [Step 3](#Step-3)
+8. [Step 4](#Step-4) 
+9. [Notes](#notes)
 
 ---
 
@@ -177,6 +178,28 @@ python -m src.cli gen-script <description>
 *Can also use python -m src.cli_loop to enter mode that allows mulitple questions & commands in one session.*
 
 ---
+
+## Step 4
+**Web Interface**
+Created webUI.py, using gradio to provide a browser based chat UI as a frontend to send HTTP POST requests to fastAPI backend in web.py hosted on a uvicorn server
+1. Enter project root:
+```powershell
+cd <project_directory>
+```
+2. Load environment:
+```powershell
+.\start_assistant.ps1
+```
+3. Launch uvicorn & fastAPI backend:
+```powershell
+python -m uvicorn src.web:app --host 0.0.0.0 --port 8000 --reload
+```
+4. Launch Gradio frontend:
+```powershell
+python src/webUI.py
+```
+5. Access frontend:
+Using web browser, navigate to http://<host_IP>:7860, where <host_IP> is the IPv4 address of the local machine running the LLM. 
 
 ## Notes
 
